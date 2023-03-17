@@ -2,7 +2,7 @@
 
 To program the computer, I created a basic language named MCASM (Minecraft Assembly).
 
-If you wish to script, you can find [the Sublime Text package](mcasm) enabling syntax highlighting and compiling.
+If you wish to script, you can find the [Sublime Text package](mcasm) enabling syntax highlighting and compiling.
 
 The syntax is pretty straightforward. Each line contains a opcode (see the [list](#instructions) below) followed by the necessary arguments.
 
@@ -14,6 +14,10 @@ For example:
 ```js
 LOAD R2 11  // Loads address 11 into register 2
 ```
+
+To compile your MCASM script, run the [converter script](cb_computer/data/cb_computer/functions/programs/converter.py) and place the resulting `.mcfunction` file in the [programs folder](cb_computer/data/cb_computer/functions/programs/).
+
+Alternatively, if you are using the [Sublime Text package](mcasm), you can run the command _"Build With: mcasm"_, then put the `.mcfunction` file the folder.
 
 ## Comments
 
