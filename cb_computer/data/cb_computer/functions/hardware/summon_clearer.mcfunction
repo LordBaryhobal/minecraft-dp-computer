@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {Tags:["cbc_output_clearer"],NoGravity:1b,Small:1b}

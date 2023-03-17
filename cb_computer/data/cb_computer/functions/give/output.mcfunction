@@ -1,0 +1,1 @@
+give @s armor_stand{EntityTag:{Tags:["cbc_output"],NoGravity:1b},display:{Name:'{"text":"Output display","color":"#35C595"}'}}

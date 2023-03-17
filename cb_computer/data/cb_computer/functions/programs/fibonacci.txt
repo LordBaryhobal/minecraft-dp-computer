@@ -1,0 +1,9 @@
+/* 0 */ LOAD R2 B
+/* 1 */ LOAD R1 B
+/* 2 */ ADD R1 A
+/* 3 */ STORE R1 B
+/* 4 */ STORE R2 A
+/* 5 */ OUT R2
+/* 6 */ JUMP 0
+/* 7 */ #A# 0
+/* 8 */ #B# 1

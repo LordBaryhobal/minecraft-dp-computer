@@ -1,0 +1,4 @@
+{
+	"cmd": ["python3", "$packages/mcasm/converter.py", "$file"],
+	"selector": "source.mcasm"
+}

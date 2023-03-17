@@ -1,0 +1,36 @@
+BRANCH is-prime
+OUT R1
+STOP
+
+//Find divisors
+/*
+    R1: number from which to find divisors
+    R2: used as cache
+*/
+
+STORE R1 tmp-num  #is-prime#
+STORE R1 tmp-step
+
+LOAD  R2 tmp-step #start-div-loop#
+SUB   R2 one
+LOAD  R1 one
+JEQ      prime //tmp-step = 1 -> no divisors -> prime
+
+STORE R2 tmp-step
+LOAD  R1 tmp-num 
+DIV   R1 tmp-step
+MUL   R1 tmp-step
+LOAD  R2 tmp-num
+JEQ      not-prime //Found divisor -> not prime
+JUMP     start-div-loop
+
+LOAD  R1 zero #not-prime#
+RBR
+
+LOAD  R1 one #prime#
+RBR
+
+#tmp-num# 0
+#tmp-step# 0
+#zero# 0
+#one# 1

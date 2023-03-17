@@ -1,0 +1,23 @@
+//Pow
+/* 0 */ STORE R1 10 //Store base
+/* 1 */ ADD R2 9
+/* 2 */ JUMP IF R2 8
+/* 3 */ STORE R2 11 //Store exponent
+/* 4 */ LOAD R2 10
+/* 5 */ JUMP 12 //Multiply
+/* 6 */ LOAD R2 11
+/* 7 */ JUMP 1
+/* 8 */ STOP
+/* 9 */ -1 //const: -1
+/* 10 */ 0 //Base
+/* 11 */ 0 //Exponent
+
+//Mult
+/* 12 */ STORE R1 18
+/* 13 */ ADD R2 19
+/* 14 */ JUMP IF R2 17
+/* 15 */ ADD R1 18
+/* 16 */ JUMP 13
+/* 17 */ JUMP 6 //Return to pow
+/* 18 */ 0 //Count
+/* 19 */ -1 //const: -1

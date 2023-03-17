@@ -1,0 +1,31 @@
+%YAML 1.2
+---
+name: MCasm
+file_extensions: [mcasm]
+scope: source.mcasm
+
+contexts:
+  main:
+    - match: /\*
+      push:
+        - meta_scope: comment.block
+        - match: \*/
+          pop: true
+    
+    - match: //
+      push:
+        - meta_scope: comment.line
+        - match: \n
+          pop: true
+    
+    - match: '#'
+      push:
+        - meta_scope: constant.language
+        - match: '#'
+          pop: true
+    
+    - match: (?<=\b)(([A-Z]+[ \d]?)+)(?=\b)
+      scope: markup.bold
+    
+    - match: '-?\d+'
+      scope: constant.numeric
